@@ -22,6 +22,10 @@ El diseño generativo me permite, como artista, diseñador e ingeniero en Diseñ
 
 ## Bitácora de aplicación 
 ### Actividad 5
+#### index.
+```
+<script src="https://unpkg.com/@gohai/p5.webserial@^1/libraries/p5.webserial.js"></script>
+```
 #### Programa p5.js.
 ``` js.
 let port;
@@ -100,6 +104,7 @@ while True:
 
 
 ## Bitácora de reflexión
+
 
 
 
