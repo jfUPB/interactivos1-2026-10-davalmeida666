@@ -33,7 +33,76 @@ cambiaba el color del círculo de la aplicación a verde y mostraba C
 Si se presionaba el botón de la aplicación, en la pantalla del microbit aparecía la imagen de un corazón y una carita feliz.
 
 ### Actividad 4
+#### Programa micro: bit:
+```
+from microbit import *
 
+uart.init(baudrate=115200)
+
+while True:
+
+    if button_a.is_pressed():
+        uart.write('A')
+    else:
+        uart.write('N')
+
+    sleep(100)
+```
+#### Programa p5.js
+``` js.
+  let port;
+  let connectBtn;
+  let connectionInitialized = false;
+
+  function setup() {
+    createCanvas(400, 400);
+    background(220);
+    port = createSerial();
+    connectBtn = createButton("Connect to micro:bit");
+    connectBtn.position(80, 300);
+    connectBtn.mousePressed(connectBtnClick);
+  }
+
+  function draw() {
+    background(220);
+
+    if (port.opened() && !connectionInitialized) {
+      port.clear();
+      connectionInitialized = true;
+    }
+
+    if (port.availableBytes() > 0) {
+      let dataRx = port.read(1);
+      if (dataRx == "A") {
+        fill("red");
+      } else if (dataRx == "N") {
+        fill("green");
+      }
+    }
+
+    rectMode(CENTER);
+    rect(width / 2, height / 2, 50, 50);
+
+    if (!port.opened()) {
+      connectBtn.html("Connect to micro:bit");
+    } else {
+      connectBtn.html("Disconnect");
+    }
+  }
+
+  function connectBtnClick() {
+    if (!port.opened()) {
+      port.open("MicroPython", 115200);
+      connectionInitialized = false;
+    } else {
+      port.close();
+    }
+  }
+
+```
+#### ¿Por qué no funcionaba el programa con was_pressed() y por qué funciona con is_pressed()? Explica detalladamente.
+
+El programa no funciona correctamente con was_pressed() porque esta función llama a cada frame, pero solamente considera el botón como un click, por lo que al cambiar de frame, vuelve a su color original. Con is_pressed(), cada frame el programa va a considerar si el botón sigue presionado, permitiendo que el color siga en su variación hasta que el botón se deje de presionar.
 
 ## Bitácora de aplicación 
 ### Actividad 5
@@ -116,9 +185,11 @@ while True:
 
     sleep(100)
 ```
-
+#### Explicación:
+En p5.js , se declaran variables, luego se prepara el setup con tamaño de canvas, se define x, y las funcionalidades de cada botón., y su posición. Seguido a eso, se llama a la función draw en cada frame. Se lee la entrada del microbit, si es A, la posición x se desplaza 20 unidades a la izquierda, y si se lee N, lo hace hacia la derecha. Luego,  dibuja la elipse en cada frame, ajustando la posición en x dada.
 
 ## Bitácora de reflexión
+
 
 
 
