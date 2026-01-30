@@ -20,6 +20,21 @@ El diseño generativo es la creación, no de elementos gráficos estáticos, sin
 
 El diseño generativo me permite, como artista, diseñador e ingeniero en Diseño de Entretenimiento Digital generar elementos gráficos únicos. Estos pueden usarse, para darle un aspecto exclusivo a los diseños, permitiendo entonces una especie de interactividad entre el usuario y el diseño. Por ejemplo, en una aplicaión, dependiendo del usuario, cada menú puede tener una paleta única, o en un videojuego sus partículas.
 
+### Actividad 3
+Se realizó un sistema interactivo simple, que involucraba conexión entre los botones del microbit y una aplicación interactiva en la pantalla. El sistema consistía en:
+
+#### Presiona el botón A del microbit: 
+cambiaba el color del círculo de la aplicación a rojo, y mostabra A
+#### Presiona el botón B del microbit: 
+cambiaba el color del círculo de la aplicación a amarillo y mostraba B
+#### Sacude el micro:bit. ¿Qué pasa?: 
+cambiaba el color del círculo de la aplicación a verde y mostraba C
+#### Presiona el botón Send Love. ¿Qué pasa? 
+Si se presionaba el botón de la aplicación, en la pantalla del microbit aparecía la imagen de un corazón y una carita feliz.
+
+### Actividad 4
+
+
 ## Bitácora de aplicación 
 ### Actividad 5
 #### index.
@@ -104,6 +119,7 @@ while True:
 
 
 ## Bitácora de reflexión
+
 
 
 
