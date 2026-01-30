@@ -190,6 +190,10 @@ En p5.js , se declaran variables, luego se prepara el setup con tamaño de canva
 
 ## Bitácora de reflexión
 
+En p5.js , se declaran las variables necesarias para poner el código en funcionamiento, luego se prepara el setup con tamaño de canvas, para definir el espacio donde apareceran las cosas en la pantalla, y las funcionalidades de cada botón,a l igual que su posición, y . Seguido a eso, se llama a la función draw en cada frame, la cual dibujara en cada frame un cuadrado en el centro de pantalla con dimensiones de 50 por 50. Posteriormente, se lee la entrada del microbit, si es A, el color del cuadrado cambia a rojo, y si la señal es N cambia a verde. CAda rame, el programa revisa si la condición de botón apretado se cumple. En este caso, el programa de microbit únicamente envía señal del botón A, por lo tanto, el programa solo cambiará el color si esta tecla está oprimida. Principalmente El programa no funciona correctamente con was_pressed() porque esta función llama a cada frame, pero solamente considera el botón como un click, por lo que al cambiar de frame, vuelve a su color original. Con is_pressed(), cada frame el programa va a considerar si el botón sigue presionado, permitiendo que el color siga en su variación hasta que el botón se deje de presionar.
+
+
+
 
 
 
