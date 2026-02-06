@@ -1,7 +1,8 @@
 # Unidad 2
 
 ## Bitácora de proceso de aprendizaje
-``` 
+```py.
+
 from microbit import
 import utime
 from fsm import Timer, FSMTask, ENTRY
@@ -58,3 +59,4 @@ while True:
 
 
 ## Bitácora de reflexión
+
