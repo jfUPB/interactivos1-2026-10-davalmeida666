@@ -1,7 +1,7 @@
 # Unidad 2
 
 ## Bitácora de proceso de aprendizaje
-```py.
+``` .py
 
 from microbit import
 import utime
@@ -59,4 +59,5 @@ while True:
 
 
 ## Bitácora de reflexión
+
 
