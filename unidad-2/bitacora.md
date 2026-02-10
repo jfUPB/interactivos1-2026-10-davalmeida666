@@ -148,7 +148,9 @@ Cada objeto `Pixel` alterna continuamente entre estos dos estados.
   - Transicionar al estado `estado_waitInON`.
 
 ---
-
+### Actividad 02
+--
+Código modificado :
 ``` .py
 
 from microbit import
@@ -202,11 +204,49 @@ while True:
     semaforo1.update()
     utime.sleep_ms(20)
 ```
+--
+Diagrama UML:
+<img width="815" height="494" alt="image" src="https://github.com/user-attachments/assets/c74a4002-f150-4fb4-a293-ba658ca8a4a8" />
+
+Código:
+```
+@startuml
+
+
+title Máquina de Estados - Clase Semaforo
+
+state Semaforo {
+
+    [*] --> WaitInRed
+
+    WaitInRed : entry / clear()
+    WaitInRed : entry / display.set_pixel(x, y, 9)
+    WaitInRed : entry / myTimer.start(timeInRed)
+
+    WaitInGreen : entry / clear()
+    WaitInGreen : entry / display.set_pixel(x, y+2, 9)
+    WaitInGreen : entry / myTimer.start(timeInGreen)
+
+    WaitInYellow : entry / clear()
+    WaitInYellow : entry / display.set_pixel(x, y+1, 9)
+    WaitInYellow : entry / myTimer.start(timeInYellow)
+
+    WaitInRed --> WaitInGreen : Timeout / display.set_pixel(x, y, 0)
+    WaitInGreen --> WaitInYellow : Timeout / display.set_pixel(x, y+2, 0)
+    WaitInGreen --> WaitInYellow : A / display.set_pixel(x, y+2, 0)
+    WaitInYellow --> WaitInRed : Timeout / display.set_pixel(x, y+1, 0)
+}
+
+@enduml
+```
+
+
 ## Bitácora de aplicación 
 
 
 
 ## Bitácora de reflexión
+
 
 
 
