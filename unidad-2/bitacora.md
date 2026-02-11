@@ -4,7 +4,7 @@
 
 ### Actividad 1
 Código:
-``` .py
+```.py
 
 from microbit import *
 import utime
@@ -151,7 +151,7 @@ Cada objeto `Pixel` alterna continuamente entre estos dos estados.
 ### Actividad 02
 --
 Código modificado :
-``` .py
+```.py
 
 from microbit import
 import utime
@@ -243,7 +243,7 @@ state Semaforo {
 
 ## Bitácora de aplicación 
 
-``` .py
+```.py
 from microbit import *
 import utime
 import music
@@ -386,6 +386,7 @@ while True:
     utime.sleep_ms(20)
 ```
 ## Bitácora de reflexión
+
 
 
 
