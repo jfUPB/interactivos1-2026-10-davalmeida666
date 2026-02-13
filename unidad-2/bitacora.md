@@ -385,7 +385,49 @@ while True:
     task.update()
     utime.sleep_ms(20)
 ```
+```
+@startuml
+' ===== Tema oscuro =====
+skinparam backgroundColor #1e1e1e
+skinparam state {
+  BackgroundColor #2d2d2d
+  BorderColor #bbbbbb
+  FontColor #ffffff
+}
+skinparam arrow {
+  Color #ffffff
+}
+skinparam defaultFontColor #ffffff
+
+title Diagrama de Estados - Temporizador (Micro:bit)
+
+[*] --> Configuracion : Inicialización\ntransicion_a(estado_configuracion)
+
+state Configuracion {
+}
+
+state Armado {
+}
+
+state Explosion {
+}
+
+Configuracion : ENTRY / display.show(FILL[count])
+Configuracion --> Configuracion : B [count < 25] /\ncount++\ndisplay.show(FILL[count])
+Configuracion --> Configuracion : A [count > 15] /\ncount--\ndisplay.show(FILL[count])
+Configuracion --> Armado : S
+
+Armado : ENTRY / myTimer.start(1000)
+Armado --> Armado : Timeout [count > 1] /\ncount--\ndisplay.show(FILL[count])\nmyTimer.start(1000)
+Armado --> Explosion : Timeout [count == 1] /\ncount--\ndisplay.show(FILL[count])
+
+Explosion : ENTRY /\ndisplay.show(Image.SKULL)\nmusic.play(DADADADUM)
+Explosion --> Configuracion : A /\ncount = 20
+
+@enduml
+```
 ## Bitácora de reflexión
+
 
 
 
