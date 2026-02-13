@@ -413,20 +413,22 @@ state Explosion {
 }
 
 Configuracion : ENTRY / display.show(FILL[count])
-Configuracion --> Configuracion : B [count < 25] /\ncount++\ndisplay.show(FILL[count])
-Configuracion --> Configuracion : A [count > 15] /\ncount--\ndisplay.show(FILL[count])
+Configuracion : B [count < 25] /\ncount++\ndisplay.show(FILL[count])
+Configuracion : A [count > 15] /\ncount--\ndisplay.show(FILL[count])
 Configuracion --> Armado : S
 
 Armado : ENTRY / myTimer.start(1000)
-Armado --> Armado : Timeout [count > 1] /\ncount--\ndisplay.show(FILL[count])\nmyTimer.start(1000)
-Armado --> Explosion : Timeout [count == 1] /\ncount--\ndisplay.show(FILL[count])
+ Armado : Timeout [count > 0] /\ncount--\ndisplay.show(FILL[count])\nmyTimer.start(1000)
+Armado --> Explosion : Timeout [count == 0] /\ncount--\ndisplay.show(FILL[count])
 
 Explosion : ENTRY /\ndisplay.show(Image.SKULL)\nmusic.play(DADADADUM)
 Explosion --> Configuracion : A /\ncount = 20
 
 @enduml
+
 ```
 ## Bitácora de reflexión
+
 
 
 
