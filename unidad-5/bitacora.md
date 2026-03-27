@@ -440,4 +440,23 @@ main().catch((e) => {
   process.exit(1);
 }); 
 ```
+<img width="838" height="564" alt="image" src="https://github.com/user-attachments/assets/4ed70838-1808-4847-ab79-cc5b6c616a21" />
+<img width="847" height="696" alt="image" src="https://github.com/user-attachments/assets/fdcaba3f-f124-4a09-bfd6-1b08b9e60455" />
+
+<img width="366" height="512" alt="image" src="https://github.com/user-attachments/assets/ebc571b7-caa7-4e76-8166-26c970c8dd6f" />
+<img width="584" height="358" alt="image" src="https://github.com/user-attachments/assets/c5d05d79-046a-4ee0-b4fb-0d610a81862a" />
+<img width="1075" height="493" alt="image" src="https://github.com/user-attachments/assets/27a152ad-8b96-49c2-91ee-81a7d4aa63e5" />
+<img width="472" height="136" alt="image" src="https://github.com/user-attachments/assets/3143543a-7ba9-4614-94a9-282bc2443621" />
+<img width="1919" height="937" alt="image" src="https://github.com/user-attachments/assets/25aa0abc-ad1d-4271-91ad-a1f20bf52a8b" />
+<img width="560" height="348" alt="image" src="https://github.com/user-attachments/assets/dfcb6675-f161-432c-b712-8601a329ddd5" />
+<img width="478" height="215" alt="image" src="https://github.com/user-attachments/assets/0a2cb91e-68cc-455d-b746-2a6ec655ef4e" />
+<img width="1897" height="952" alt="image" src="https://github.com/user-attachments/assets/c4e0cffe-ad0d-4998-a9bf-f868e18c15b1" />
+
+
+
+
+
+
+
+
 ## Bitácora de reflexión
