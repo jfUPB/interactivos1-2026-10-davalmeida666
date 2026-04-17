@@ -8,6 +8,7 @@
 <img width="1042" height="718" alt="image" src="https://github.com/user-attachments/assets/c12469c4-9701-43f0-8c38-52fd47c49ef5" />
 <img width="610" height="281" alt="image" src="https://github.com/user-attachments/assets/d2f910f3-1646-4988-bfa6-29e058acd2a1" />
 ### Código
+
 ### index_strudel.html
 
 ``` .html
