@@ -7,6 +7,7 @@
 <img width="1893" height="943" alt="image" src="https://github.com/user-attachments/assets/ec50a68f-bfeb-4a3a-8cd6-2422d51ccf9d" />
 <img width="1042" height="718" alt="image" src="https://github.com/user-attachments/assets/c12469c4-9701-43f0-8c38-52fd47c49ef5" />
 <img width="610" height="281" alt="image" src="https://github.com/user-attachments/assets/d2f910f3-1646-4988-bfa6-29e058acd2a1" />
+
 ### Código
 
 ### index_strudel.html
@@ -132,7 +133,7 @@ class StrudelTask extends FSMTask {
 }
 ```
 ## StrudelAdapter.js
-```
+```.js
 const { WebSocketServer } = require("ws");
 const BaseAdapter = require("./BaseAdapter");
 
@@ -225,7 +226,7 @@ constructor({ port = 8080 } = {}) {
 module.exports = StrudelAdapter;
 ```
 ### BridgeServer.js
-```
+```.js
 //   Uso:
 //     node bridgeServer.js --device sim --wsPort 8081 --hz 30
 //     node bridgeServer.js --device microbit --wsPort 8081 --serialPort COM5 --baud 115200
